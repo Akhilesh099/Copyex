@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stealth Architect Control</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 1rem;
+      width: 240px;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+      color: #eee;
+    }
+    h1 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      color: #00ff88;
+    }
+    .status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .badge {
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.4rem;
+      font-weight: 600;
+    }
+    .on { background: #00ff8822; color: #00ff88; }
+    .off { background: #ff444422; color: #ff4444; }
+    button {
+      width: 100%;
+      padding: 0.6rem 0;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-on { background: #00ff88; color: #000; }
+    .btn-on:hover { background: #00e676; }
+    .btn-off { background: #ff4444; color: #fff; }
+    .btn-off:hover { background: #e63d3d; }
+    .note {
+      margin-top: 0.8rem;
+      font-size: 0.75rem;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stealth Architect</h1>
+  <div class="status">
+    <span>Mode:</span>
+    <span id="mode-badge" class="badge off">OFF</span>
+  </div>
+  <button id="toggle" class="btn-off">Enable Final Boss</button>
+  <div class="note">Enabling reloads the current tab to apply stealth.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
